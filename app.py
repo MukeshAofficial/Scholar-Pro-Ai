@@ -103,7 +103,7 @@ def generate_html():
 
 
 def generate_notesummary(note_text):
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     rply = model.generate_content("summarize my notes"+note_text)
     to_markdown(rply.text)
     return rply.text
